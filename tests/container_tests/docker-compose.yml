@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: ${APP_CONTAINER}
+  testsuite:
+    build:
+      context: . 
+      dockerfile: ./Dockerfile
+    depends_on:
+      - "app"
